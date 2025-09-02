@@ -1,0 +1,233 @@
+/* Общие стили */
+body {
+  margin: 0;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  background: #cfe4fb;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: #467fcf;
+  font-size: 2rem;
+}
+
+/* Зона загрузки */
+.upload-area {
+  width: 90%;
+  max-width: 600px;
+  min-height: 150px;
+  margin: 0 auto 20px;
+  border: 2px dashed #467fcf;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s, border-color .2s;
+}
+.upload-area.dragover {
+  background: #eef6ff;
+  border-color: #377be0;
+}
+.upload-area__icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #467fcf;
+}
+.upload-area__text {
+  font-size: 1rem;
+  color: #666;
+}
+.upload-area__filename {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Кнопки записи и отправки */
+.controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.controls button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background: #5a9dfc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background .2s;
+}
+.controls button:hover:not([disabled]) {
+  background: #377be0;
+}
+.controls button:disabled {
+  background: #aac8fa;
+  cursor: not-allowed;
+}
+
+/* Сохранить запись */
+.audio-save {
+  display: none;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#audioSaveContainer button,
+#saveAudioBtn {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background .2s;
+}
+#audioSaveContainer button:hover:not([disabled]),
+#saveAudioBtn:hover:not([disabled]) {
+  background: #45a049;
+}
+#audioSaveContainer button:disabled,
+#saveAudioBtn:disabled {
+  background: #a5d6a7;
+  cursor: not-allowed;
+}
+
+/* Блок результата */
+.result-box {
+  width: 90%;
+  max-width: 600px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  display: none;
+}
+.result-box.active {
+  display: block;
+}
+
+/* Редактируемое поле */
+.result-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  margin-top: 8px;
+  min-height: 120px;
+}
+
+/* Кнопки копирования/скачивания  */
+.result-controls {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+#copyBtn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background: #4caf50;
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background .2s, border-color .2s;
+}
+#copyBtn:hover:not([disabled]) {
+  background: #45a049;
+  border-color: #000;
+}
+#copyBtn:disabled {
+  background: #a5d6a7;
+  border-color: #666;
+  cursor: not-allowed;
+}
+
+#downloadWordBtn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background: #795548;
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background .2s, border-color .2s;
+}
+#downloadWordBtn:hover:not([disabled]) {
+  background: #5d4037;
+  border-color: #321f14;
+}
+#downloadWordBtn:disabled {
+  background: #bcaaa4;
+  border-color: #7b5e57;
+  cursor: not-allowed;
+}
+
+/* Инструкция */
+.how-it-works {
+  max-width: 900px;
+  margin: 40px auto;
+}
+.how-it-works__title {
+  font-size: 1.8rem;
+  color: #467fcf;
+  margin-bottom: 20px;
+}
+.how-it-works__list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.how-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1 1 260px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  transition: box-shadow .2s, transform .2s;
+}
+.how-item__number {
+  width: 36px;
+  height: 36px;
+  background: #cfe4fb;
+  border-radius: 50%;
+  color: #467fcf;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.how-item__content {
+  text-align: left;
+}
+.how-item__heading {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  color: #467fcf;
+}
+.how-item__text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+.how-item.active {
+  box-shadow: 0 0 0 2px #377be0;
+  transform: translateY(-4px);
+}

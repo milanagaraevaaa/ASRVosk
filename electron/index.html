@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Преобразовать аудио в текст</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Преобразовать аудио в текст</h1>
+
+  <div id="uploadArea" class="upload-area">
+    <div class="upload-area__icon">📂</div>
+    <div class="upload-area__text">Перетащите файл сюда или нажмите</div>
+    <div id="fileName" class="upload-area__filename">Файл не выбран</div>
+    <input type="file" id="fileInput" accept="audio/*" style="display:none;">
+  </div>
+
+  <div class="controls">
+    <button id="recordBtn">Начать запись</button>
+    <button id="sendBtn" disabled>Преобразовать в текст</button>
+  </div>
+
+  <div id="audioSaveContainer" class="audio-save">
+    <button id="saveAudioBtn" disabled>Сохранить аудио</button>
+  </div>
+
+  <div id="resultBox" class="result-box">
+    <strong>Текст:</strong>
+    <textarea id="resultText" class="result-textarea" rows="8"></textarea>
+    <div id="resultControls" class="result-controls">
+      <button id="copyBtn" disabled>Копировать</button>
+      <button id="downloadWordBtn" disabled>Скачать Word</button>
+    </div>
+  </div>
+
+  <section class="how-it-works">
+    <h2 class="how-it-works__title">Как это работает?</h2>
+    <div class="how-it-works__list">
+      <div class="how-item" data-step="1">
+        <div class="how-item__number">1</div>
+        <div class="how-item__content">
+          <h3 class="how-item__heading">Загрузите или запишите</h3>
+          <p class="how-item__text">Перетащите файл или запишите голос.</p>
+        </div>
+      </div>
+      <div class="how-item" data-step="2">
+        <div class="how-item__number">2</div>
+        <div class="how-item__content">
+          <h3 class="how-item__heading">Преобразуйте</h3>
+          <p class="how-item__text">Нажмите «Преобразовать в текст».</p>
+        </div>
+      </div>
+      <div class="how-item" data-step="3">
+        <div class="how-item__number">3</div>
+        <div class="how-item__content">
+          <h3 class="how-item__heading">Сохраните</h3>
+          <p class="how-item__text">Копируйте или скачивайте результат.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

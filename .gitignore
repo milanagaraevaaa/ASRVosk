@@ -1,0 +1,36 @@
+
+# Python / PyTorch models
+*.pt
+*.pth
+*.ckpt
+*.model
+*.safetensors
+*.bin
+*.onnx
+
+# Whisper / Vosk / Punctuation models
+python_backend/punct_model/model.safetensors
+python_backend/vosk-model-ru-0.42/
+python_backend/temp_*.mp3
+
+# Virtual environment
+.venv/
+env/
+
+# Node / Electron
+node_modules/
+dist/
+build/
+
+# MacOS
+.DS_Store
+.idea/
+# Модели и временные файлы
+python_backend/punct_model/
+python_backend/temp_common_voice_ru_*.mp3
+__pycache__/
+*.pyc
+
+python_backend/punct_model/
+python_backend/vosk-model-ru-0.42/
+python_backend/temp_common_voice_ru_*.mp3

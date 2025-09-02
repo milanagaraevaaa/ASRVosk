@@ -1,0 +1,31 @@
+{
+  "name": "my_speech_app",
+  "version": "1.0.0",
+  "description": "Распознавание речи с помощью Python и Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^35.3.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "form-data": "^4.0.0",
+    "node-fetch": "^2.7.0",
+    "wavefile": "^11.0.0"
+  },
+  "build": {
+    "appId": "com.example.myspeechapp",
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
